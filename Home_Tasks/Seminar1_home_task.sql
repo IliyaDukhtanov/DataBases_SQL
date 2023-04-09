@@ -34,7 +34,6 @@ SELECT *
 FROM mobile_phones
 WHERE manufacturer = 'Samsung';
 
--- 4. Дополнительные задания.
 -- 4.1. Товары, в которых есть упоминание "Iphone"
 SELECT *
 FROM mobile_phones
@@ -58,6 +57,11 @@ or product_name LIKE '%6%'
 or product_name LIKE '%7%' 
 or product_name LIKE '%8%' 
 or product_name LIKE '%9%';
+
+-- Вариант 2  - предпочтительный
+SELECT *
+FROM mobile_phones
+WHERE product_name RLIKE '[0-9]';
 
 -- 4.4.  Товары, в которых есть ЦИФРА "8"  
 SELECT *
