@@ -216,7 +216,7 @@ SELECT COUNT(*) Лайки_младше_12
 FROM likes
 WHERE user_id IN (SELECT user_id 
 	   FROM profiles
-	   WHERE (YEAR(CURDATE()) - YEAR(birthday)) < 12);
+	   WHERE TIMESTAMPDIFF(YEAR, birthday, NOW()) < 12);
        
  
 -- 2. Определить кто больше поставил лайков (всего): мужчины или женщины.
